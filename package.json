@@ -1,0 +1,17 @@
+{
+  "name": "locasoft-website",
+  "version": "1.0.0",
+  "description": "Build helpers for optimizing Axis-based Locasoft website",
+  "scripts": {
+    "optimize:images": "imagemin \"assets/img/*/*\" --out-dir=assets/img/ --plugin=webp",
+    "generate:srcset": "node scripts/generate-srcset.js",
+    "minify:css": "npx clean-css-cli -o assets/css/main.min.css assets/css/main.css",
+    "build": "npm run generate:srcset && npm run optimize:images && npm run minify:css"
+  },
+  "devDependencies": {
+    "imagemin-cli": "^8.0.0",
+    "imagemin-webp": "^7.0.0",
+    "clean-css-cli": "^5.0.0",
+    "sharp": "^0.32.0"
+  }
+}

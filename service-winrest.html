@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>WinRest — Solução POS para Restauração | LOCASOFT</title>
+  <meta name="description" content="WinRest POS: gestão de mesas, pedidos e integração com impressoras/terminals. Soluções para restaurantes, cafés e bares.">
+  <meta property="og:image" content="assets/img/about/about-8-800.webp">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    /* Modern Design Styles for LOCASOFT */
+    .service-hero {
+      background: linear-gradient(135deg, #e8f2ff 0%, #fff5e6 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .service-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 20% 80%, rgba(0, 102, 204, 0.1) 0%, transparent 50%),
+                  radial-gradient(circle at 80% 20%, rgba(255, 102, 0, 0.1) 0%, transparent 50%);
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .feature-item {
+      padding: 2rem;
+      border-radius: 1rem;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(0, 102, 204, 0.1);
+    }
+    .feature-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      transition: transform 0.3s ease;
+    }
+    .feature-item:hover .feature-icon {
+      transform: scale(1.1) rotate(5deg);
+    }
+    .benefits-row {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .benefit-card {
+      padding: 1.5rem;
+      border-radius: 0.75rem;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(0, 102, 204, 0.1);
+    }
+    .process-steps {
+      position: relative;
+    }
+    .step {
+      margin-bottom: 2rem;
+      position: relative;
+    }
+    .step-number {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: white;
+      position: absolute;
+      left: 0;
+      top: 0;
+      box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+    }
+    .process-steps::before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, #0066cc, #ff6600);
+      border-radius: 1px;
+    }
+    .sticky-contact {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid rgba(0, 102, 204, 0.1);
+      padding: 1rem;
+      z-index: 1000;
+      box-shadow: 0 -4px 20px rgba(0, 102, 204, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .service-cta {
+      background: linear-gradient(135deg, #e8f2ff 0%, #fff5e6 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .service-cta::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 30% 70%, rgba(0, 102, 204, 0.05) 0%, transparent 50%),
+                  radial-gradient(circle at 70% 30%, rgba(255, 102, 0, 0.05) 0%, transparent 50%);
+    }
+    .fadeInUp {
+      animation: fadeInUp 0.6s ease-out;
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #0066cc, #ff6600);
+      border: none;
+      transition: all 0.3s ease;
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0, 102, 204, 0.3);
+    }
+    .btn-outline-primary {
+      border-color: #0066cc;
+      color: #0066cc;
+      transition: all 0.3s ease;
+    }
+    .btn-outline-primary:hover {
+      background: linear-gradient(135deg, #0066cc, #ff6600);
+      border-color: transparent;
+      color: white;
+    }
+  </style>
+</head>
+
+<body class="service-details-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.webp" alt=""> -->
+        <h1 class="sitename">
+          <span class="logo-loca">LOCA</span><span class="logo-soft">SOFT</span>
+        </h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#hero">Home</a></li>
+          <li><a href="index.html#about">Sobre Nós</a></li>
+          <li><a href="index.html#services">Serviços</a></li>
+          <li><a href="index.html#contact">Contacto</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- Hero -->
+    <section class="service-hero section" aria-labelledby="service-title" style="background: linear-gradient(135deg, #e8f2ff 0%, #fff5e6 100%); position: relative; overflow: hidden;">
+      <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 20% 80%, rgba(0, 102, 204, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255, 102, 0, 0.1) 0%, transparent 50%);"></div>
+      <div class="container position-relative">
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-7" data-aos="fade-up">
+            <span class="subtitle" style="color: #0066cc; font-weight: 600;">Serviço</span>
+            <h1 id="service-title" style="color: #1a3a5c;">WinRest</h1>
+            <p class="lead service-overview">Solução POS especializada para restauração — gestão de mesas, pedidos e integração com impressoras e pagamentos.</p>
+            <div class="d-flex gap-2 mt-3">
+              <a href="index.html#contact" class="btn btn-primary btn-lg" style="background: linear-gradient(135deg, #0066cc, #ff6600); border: none; box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);" aria-label="Peça demonstração WinRest">Peça demonstração</a>
+              <a href="#features" class="btn btn-outline-primary btn-lg" style="border-color: #0066cc; color: #0066cc;" aria-label="Ver funcionalidades">Ver funcionalidades</a>
+            </div>
+          </div>
+          <div class="col-lg-5" data-aos="fade-left">
+            <div style="position: relative;">
+              <picture>
+                <source type="image/webp" srcset="assets/img/about/about-8-400.webp 400w, assets/img/about/about-8-800.webp 800w, assets/img/about/about-8-1200.webp 1200w" sizes="(max-width:768px) 90vw, 50vw">
+                <img src="assets/img/about/about-8-800.webp" alt="WinRest POS" class="img-fluid" style="border-radius: 1rem; box-shadow: 0 20px 40px rgba(0, 102, 204, 0.2); transition: transform 0.3s ease;" loading="eager" decoding="async" fetchpriority="high" width="640" height="480">
+              </picture>
+              <div style="position: absolute; top: -10px; right: -10px; background: linear-gradient(135deg, #0066cc, #ff6600); color: white; padding: 8px 12px; border-radius: 50%; box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);">
+                <i class="bi bi-shop"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="section">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <span class="subtitle">Funcionalidades</span>
+          <h2>O que entregamos</h2>
+        </div>
+
+        <div class="features-grid mt-4">
+          <div class="feature-item" style="background: linear-gradient(135deg, #f8fbff 0%, #e8f2ff 100%); border: 1px solid rgba(0, 102, 204, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 25px rgba(0, 102, 204, 0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0, 102, 204, 0.1)';">
+            <div class="feature-icon" style="background: linear-gradient(135deg, #0066cc, #004d99); color: white;"><i class="bi bi-book"></i></div>
+            <div>
+              <h4 style="color: #1a3a5c;">Gestão de Mesas</h4>
+              <p class="mb-0" style="color: #666;">Planeamento visual de mesas, reservas e turnos.</p>
+            </div>
+          </div>
+
+          <div class="feature-item" style="background: linear-gradient(135deg, #fff9f5 0%, #fff5e6 100%); border: 1px solid rgba(255, 102, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 25px rgba(255, 102, 0, 0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(255, 102, 0, 0.1)';">
+            <div class="feature-icon" style="background: linear-gradient(135deg, #ff6600, #cc5200); color: white;"><i class="bi bi-receipt"></i></div>
+            <div>
+              <h4 style="color: #1a3a5c;">Comandas & Cozinha</h4>
+              <p class="mb-0" style="color: #666;">Envio rápido para cozinha e impressão automática.</p>
+            </div>
+          </div>
+
+          <div class="feature-item" style="background: linear-gradient(135deg, #f8fbff 0%, #e8f2ff 100%); border: 1px solid rgba(0, 102, 204, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 25px rgba(0, 102, 204, 0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0, 102, 204, 0.1)';">
+            <div class="feature-icon" style="background: linear-gradient(135deg, #0066cc, #004d99); color: white;"><i class="bi bi-currency-bitcoin"></i></div>
+            <div>
+              <h4 style="color: #1a3a5c;">Pagamentos Integrados</h4>
+              <p class="mb-0" style="color: #666;">Integração com terminais e relatórios por forma de pagamento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits & Process -->
+    <section class="section">
+      <div class="container" data-aos="fade-up">
+        <div class="row gy-4">
+          <div class="col-lg-7">
+            <div class="section-title">
+              <span class="subtitle" style="color: #0066cc; font-weight: 600;">Benefícios</span>
+              <h2 style="color: #1a3a5c;">O que ganha</h2>
+            </div>
+
+            <div class="benefits-row mt-3">
+              <div class="benefit-card" style="background: linear-gradient(135deg, #f8fbff 0%, #e8f2ff 100%); border: 1px solid rgba(0, 102, 204, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0, 102, 204, 0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0, 102, 204, 0.1)';">
+                <h5 style="color: #1a3a5c;"><i class="bi bi-lightning-fill me-2" style="color: #0066cc;"></i>Agilidade no serviço</h5>
+                <p class="mb-0" style="color: #666;">Reduza tempos de espera e erros de pedidos.</p>
+              </div>
+              <div class="benefit-card" style="background: linear-gradient(135deg, #fff9f5 0%, #fff5e6 100%); border: 1px solid rgba(255, 102, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(255, 102, 0, 0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(255, 102, 0, 0.1)';">
+                <h5 style="color: #1a3a5c;"><i class="bi bi-cash-stack me-2" style="color: #ff6600;"></i>Controlo de caixa</h5>
+                <p class="mb-0" style="color: #666;">Fecho de turno simplificado e relatórios precisos.</p>
+              </div>
+              <div class="benefit-card" style="background: linear-gradient(135deg, #f8fbff 0%, #e8f2ff 100%); border: 1px solid rgba(0, 102, 204, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0, 102, 204, 0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0, 102, 204, 0.1)';">
+                <h5 style="color: #1a3a5c;"><i class="bi bi-gear-wide-connected me-2" style="color: #0066cc;"></i>Integração total</h5>
+                <p class="mb-0" style="color: #666;">Compatível com impressoras, POS e sistemas de gestão.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-5">
+            <div class="section-title">
+              <span class="subtitle" style="color: #0066cc; font-weight: 600;">Processo</span>
+              <h2 style="color: #1a3a5c;">Como implementamos</h2>
+            </div>
+
+            <div class="process-steps mt-3" style="display: flex; flex-direction: column; gap: 1.5rem; position: relative;">
+              <div style="position: absolute; left: 20px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, #0066cc, #ff6600); z-index: 1;"></div>
+              <div class="step" style="background: linear-gradient(135deg, #ffffff 0%, #e8f2ff 100%); border: 1px solid rgba(0, 102, 204, 0.1); position: relative; margin-left: 40px;">
+                <div class="step-number" style="background: linear-gradient(135deg, #0066cc, #ff6600); color: white; position: absolute; left: -50px; top: 50%; transform: translateY(-50%);">1</div>
+                <h6 class="mb-1" style="color: #1a3a5c;">Planeamento</h6>
+                <p class="small mb-0">Mapeamos fluxo de salas e cozinha.</p>
+              </div>
+              <div class="step" style="background: linear-gradient(135deg, #ffffff 0%, #fff5e6 100%); border: 1px solid rgba(255, 102, 0, 0.1); position: relative; margin-left: 40px;">
+                <div class="step-number" style="background: linear-gradient(135deg, #ff6600, #0066cc); color: white; position: absolute; left: -50px; top: 50%; transform: translateY(-50%);">2</div>
+                <h6 class="mb-1" style="color: #1a3a5c;">Instalação</h6>
+                <p class="small mb-0">Montagem e integração de hardware.</p>
+              </div>
+              <div class="step" style="background: linear-gradient(135deg, #ffffff 0%, #e8f2ff 100%); border: 1px solid rgba(0, 102, 204, 0.1); position: relative; margin-left: 40px;">
+                <div class="step-number" style="background: linear-gradient(135deg, #0066cc, #ff6600); color: white; position: absolute; left: -50px; top: 50%; transform: translateY(-50%);">3</div>
+                <h6 class="mb-1" style="color: #1a3a5c;">Treino</h6>
+                <p class="small mb-0">Formação da equipa em contexto real.</p>
+              </div>
+              <div class="step" style="background: linear-gradient(135deg, #ffffff 0%, #fff5e6 100%); border: 1px solid rgba(255, 102, 0, 0.1); position: relative; margin-left: 40px;">
+                <div class="step-number" style="background: linear-gradient(135deg, #ff6600, #0066cc); color: white; position: absolute; left: -50px; top: 50%; transform: translateY(-50%);">4</div>
+                <h6 class="mb-1" style="color: #1a3a5c;">Suporte</h6>
+                <p class="small mb-0">Apoio contínuo e atualizações.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sticky contact CTA -->
+    <div class="sticky-contact" role="dialog" aria-label="Contacte-nos rapidamente" style="background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-top: 1px solid rgba(0, 102, 204, 0.1); box-shadow: 0 -4px 20px rgba(0, 102, 204, 0.1);">
+      <div>
+        <strong style="color: #1a3a5c;">Precisa de ajuda?</strong>
+        <div class="small" style="color: #666;">Demonstração WinRest disponível</div>
+      </div>
+      <div class="ms-auto">
+        <a href="index.html#contact" class="btn btn-primary" style="background: linear-gradient(135deg, #0066cc, #ff6600); border: none; box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);">Contacte</a>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <section class="service-cta py-5" style="background: linear-gradient(135deg, #e8f2ff 0%, #fff5e6 100%); position: relative; overflow: hidden;">
+      <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 30% 70%, rgba(0, 102, 204, 0.05) 0%, transparent 50%), radial-gradient(circle at 70% 30%, rgba(255, 102, 0, 0.05) 0%, transparent 50%);"></div>
+      <div class="container position-relative">
+        <div class="p-4 p-md-5" style="background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(20px); border-radius: 1rem; border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 20px 40px rgba(0, 102, 204, 0.1); text-align: center;">
+          <h2 class="fw-bold" style="color: #1a3a5c;">Precisa de assistência?</h2>
+          <p class="mb-4 cta-subtext" style="color: #666;">Contacte-nos para integrar/configurar o WinRest para o seu restaurante.</p>
+          <a href="index.html#contact" class="btn btn-primary btn-lg" style="background: linear-gradient(135deg, #0066cc, #ff6600); border: none; box-shadow: 0 8px 25px rgba(0, 102, 204, 0.3); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)';" onmouseout="this.style.transform='translateY(0)';">Fale connosco</a>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      (function(){
+        var title = document.querySelector('.service-title').innerText.trim();
+        var el = document.querySelector('.cta-subtext');
+        if(el) el.textContent = 'Contacte-nos para integrar/configurar o ' + title + ' para o seu restaurante.';
+      })();
+    </script>
+
+  </main>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

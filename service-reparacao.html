@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Reparação e Manutenção — Assistência Técnica | LOCASOFT</title>
+  <meta name="description" content="Suporte técnico, diagnósticos, reparações em oficina e manutenção preventiva para manter os seus sistemas a funcionar.">
+  <meta property="og:image" content="assets/img/about/about-square-10-800.webp">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    .feature-item:hover {
+      transform: translateY(-8px) scale(1.02);
+      transition: all 0.3s ease;
+      box-shadow: 0 15px 35px rgba(0, 102, 204, 0.2);
+    }
+    .benefit-card:hover {
+      transform: translateY(-5px);
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 25px rgba(0, 102, 204, 0.15);
+    }
+    .step:hover {
+      transform: translateY(-5px);
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 25px rgba(0, 102, 204, 0.15);
+    }
+    .testimonial:hover {
+      transform: translateY(-5px);
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 25px rgba(0, 102, 204, 0.15);
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .section-title h2 {
+      animation: fadeInUp 0.8s ease-out;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+    .feature-icon {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .feature-item:hover .feature-icon {
+      transform: scale(1.1) rotate(5deg);
+      box-shadow: 0 8px 20px rgba(0, 102, 204, 0.3);
+    }
+    .step-number {
+      transition: transform 0.3s ease;
+    }
+    .step:hover .step-number {
+      transform: scale(1.1);
+    }
+    .service-cta::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="rgba(255,255,255,0.1)"/></svg>');
+      pointer-events: none;
+    }
+  </style>
+</head>
+
+<body class="service-details-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.webp" alt=""> -->
+        <h1 class="sitename">
+          <span class="logo-loca">LOCA</span><span class="logo-soft">SOFT</span>
+        </h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#hero">Home</a></li>
+          <li><a href="index.html#about">Sobre Nós</a></li>
+          <li><a href="index.html#services">Serviços</a></li>
+          <li><a href="index.html#contact">Contacto</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- Hero -->
+    <section class="service-hero section" aria-labelledby="service-title" style="background: linear-gradient(135deg, #e8f2ff 0%, #fff5e6 100%); position: relative; overflow: hidden;">
+      <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 20% 80%, rgba(0, 102, 204, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255, 102, 0, 0.1) 0%, transparent 50%);"></div>
+      <div class="container position-relative">
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-7" data-aos="fade-up">
+            <span class="subtitle" style="color: #0066cc; font-weight: 600;">Serviço</span>
+            <h1 id="service-title" style="color: #1a3a5c;">Reparação e Manutenção</h1>
+            <p class="lead service-overview">Suporte técnico completo: diagnóstico remoto, intervenção on-site e reparação em oficina para minimizar interrupções no seu negócio.</p>
+            <div class="d-flex gap-2 mt-3">
+              <a href="index.html#contact" class="btn btn-primary btn-lg" style="background: linear-gradient(135deg, #0066cc, #ff6600); border: none; box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);" aria-label="Pedir reparação">Pedir assistência</a>
+              <a href="#features" class="btn btn-outline-primary btn-lg" style="border-color: #0066cc; color: #0066cc;" aria-label="Ver serviços">Ver serviços</a>
+            </div>
+          </div>
+          <div class="col-lg-5" data-aos="fade-left">
+            <div style="position: relative;">
+              <picture>
+                <source type="image/webp" srcset="assets/img/about/about-square-10-400.webp 400w, assets/img/about/about-square-10-800.webp 800w, assets/img/about/about-square-10-1200.webp 1200w" sizes="(max-width:768px) 90vw, 50vw">
+                <img src="assets/img/about/about-square-10-800.webp" alt="Reparação e Manutenção" class="img-fluid" style="border-radius: 1rem; box-shadow: 0 20px 40px rgba(0, 102, 204, 0.2); transition: transform 0.3s ease;" loading="eager" decoding="async" fetchpriority="high" width="640" height="480">
+              </picture>
+              <div style="position: absolute; top: -10px; right: -10px; background: linear-gradient(135deg, #0066cc, #ff6600); color: white; padding: 8px 12px; border-radius: 50%; box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);">
+                <i class="bi bi-tools"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="section" style="background: linear-gradient(180deg, #ffffff 0%, #f9f9f9 100%);">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <span class="subtitle" style="color: #0066cc;">Serviços</span>
+          <h2 style="color: #1a3a5c;">O que fazemos</h2>
+        </div>
+
+        <div class="features-grid mt-4">
+          <div class="feature-item" style="border: 1px solid rgba(0, 102, 204, 0.1); background: linear-gradient(135deg, #ffffff 0%, #e8f2ff 100%);">
+            <div class="feature-icon" style="background: linear-gradient(135deg, #0066cc, #ff6600); color: white;"><i class="bi bi-wrench"></i></div>
+            <div>
+              <h4 style="color: #1a3a5c;">Diagnóstico Remoto</h4>
+              <p class="mb-0">Análise rápida para identificar a causa e orientar a correção.</p>
+            </div>
+          </div>
+
+          <div class="feature-item" style="border: 1px solid rgba(255, 102, 0, 0.1); background: linear-gradient(135deg, #ffffff 0%, #fff5e6 100%);">
+            <div class="feature-icon" style="background: linear-gradient(135deg, #ff6600, #0066cc); color: white;"><i class="bi bi-truck"></i></div>
+            <div>
+              <h4 style="color: #1a3a5c;">Intervenção On-site</h4>
+              <p class="mb-0">Técnicos disponíveis para resolução imediata quando necessário.</p>
+            </div>
+          </div>
+
+          <div class="feature-item" style="border: 1px solid rgba(0, 102, 204, 0.1); background: linear-gradient(135deg, #ffffff 0%, #e8f2ff 100%);">
+            <div class="feature-icon" style="background: linear-gradient(135deg, #0066cc, #ff6600); color: white;"><i class="bi bi-gear"></i></div>
+            <div>
+              <h4 style="color: #1a3a5c;">Reparação em Oficina</h4>
+              <p class="mb-0">Recuperação de sistemas e substituição de componentes com teste completo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits & Process -->
+    <section class="section" style="background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);">
+      <div class="container" data-aos="fade-up">
+        <div class="row gy-4">
+          <div class="col-lg-7">
+            <div class="section-title">
+              <span class="subtitle" style="color: #0066cc;">Benefícios</span>
+              <h2 style="color: #1a3a5c;">Porquê escolher a nossa assistência</h2>
+            </div>
+
+            <div class="benefits-row mt-3">
+              <div class="benefit-card" style="background: linear-gradient(135deg, #ffffff 0%, #e8f2ff 100%); border: 1px solid rgba(0, 102, 204, 0.1);">
+                <h5 style="color: #0066cc;">Resposta rápida</h5>
+                <p class="mb-0">Minimizamos o tempo de paragem com diagnóstico e intervenção ágil.</p>
+              </div>
+              <div class="benefit-card" style="background: linear-gradient(135deg, #ffffff 0%, #fff5e6 100%); border: 1px solid rgba(255, 102, 0, 0.1);">
+                <h5 style="color: #ff6600;">Recuperação segura</h5>
+                <p class="mb-0">Reparações testadas e documentação técnica fornecida.</p>
+              </div>
+              <div class="benefit-card" style="background: linear-gradient(135deg, #ffffff 0%, #e8f2ff 100%); border: 1px solid rgba(0, 102, 204, 0.1);">
+                <h5 style="color: #0066cc;">Contratos opcionais</h5>
+                <p class="mb-0">Planos de manutenção para evitar futuras falhas.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-5">
+            <div class="section-title">
+              <span class="subtitle" style="color: #ff6600;">Processo</span>
+              <h2 style="color: #1a3a5c;">Como atuamos</h2>
+            </div>
+
+            <div class="process-steps mt-3" style="display: flex; flex-direction: column; gap: 1.5rem; position: relative;">
+              <div style="position: absolute; left: 20px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, #0066cc, #ff6600); z-index: 1;"></div>
+              <div class="step" style="background: linear-gradient(135deg, #ffffff 0%, #e8f2ff 100%); border: 1px solid rgba(0, 102, 204, 0.1); position: relative; margin-left: 40px;">
+                <div class="step-number" style="background: linear-gradient(135deg, #0066cc, #ff6600); color: white; position: absolute; left: -50px; top: 50%; transform: translateY(-50%);">1</div>
+                <h6 class="mb-1" style="color: #1a3a5c;">Contacto</h6>
+                <p class="small mb-0">Recebemos o pedido e efetua-se triagem.</p>
+              </div>
+              <div class="step" style="background: linear-gradient(135deg, #ffffff 0%, #fff5e6 100%); border: 1px solid rgba(255, 102, 0, 0.1); position: relative; margin-left: 40px;">
+                <div class="step-number" style="background: linear-gradient(135deg, #ff6600, #0066cc); color: white; position: absolute; left: -50px; top: 50%; transform: translateY(-50%);">2</div>
+                <h6 class="mb-1" style="color: #1a3a5c;">Diagnóstico</h6>
+                <p class="small mb-0">Tentativa de resolução remota.</p>
+              </div>
+              <div class="step" style="background: linear-gradient(135deg, #ffffff 0%, #e8f2ff 100%); border: 1px solid rgba(0, 102, 204, 0.1); position: relative; margin-left: 40px;">
+                <div class="step-number" style="background: linear-gradient(135deg, #0066cc, #ff6600); color: white; position: absolute; left: -50px; top: 50%; transform: translateY(-50%);">3</div>
+                <h6 class="mb-1" style="color: #1a3a5c;">Intervenção</h6>
+                <p class="small mb-0">On-site ou envio para oficina.</p>
+              </div>
+              <div class="step" style="background: linear-gradient(135deg, #ffffff 0%, #fff5e6 100%); border: 1px solid rgba(255, 102, 0, 0.1); position: relative; margin-left: 40px;">
+                <div class="step-number" style="background: linear-gradient(135deg, #ff6600, #0066cc); color: white; position: absolute; left: -50px; top: 50%; transform: translateY(-50%);">4</div>
+                <h6 class="mb-1" style="color: #1a3a5c;">Validação</h6>
+                <p class="small mb-0">Testes finais e entrega funcional.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sticky contact CTA -->
+    <div class="sticky-contact" style="background: linear-gradient(135deg, #0066cc, #ff6600); color: white; box-shadow: 0 8px 30px rgba(0, 102, 204, 0.3);" role="dialog" aria-label="Contacte-nos rapidamente">
+      <div>
+        <strong style="color: white;">Precisa de ajuda?</strong>
+        <div class="small" style="color: rgba(255, 255, 255, 0.9);">Assistência técnica e oficinas</div>
+      </div>
+      <div class="ms-auto">
+        <a href="index.html#contact" class="btn btn-primary" style="background: white; color: #0066cc; border: none;">Contacte</a>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <section class="service-cta py-5" style="background: linear-gradient(135deg, #0066cc 0%, #ff6600 100%); color: white; position: relative; overflow: hidden;">
+      <div class="container position-relative">
+        <div class="p-4 p-md-5 rounded-3 text-center" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
+          <h2 class="fw-bold" style="color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Precisa de assistência?</h2>
+          <p class="mb-4 cta-subtext" style="color: rgba(255, 255, 255, 0.9); font-size: 1.1rem;">Contacte-nos para realizar o seu serviço.</p>
+          <a href="index.html#contact" class="btn btn-lg" style="background: linear-gradient(135deg, #ffffff, #f0f0f0); color: #0066cc; border: none; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); padding: 12px 30px; border-radius: 25px; font-weight: 600; transition: all 0.3s ease;">Fale connosco</a>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      (function(){
+        var title = document.querySelector('.service-title').innerText.trim();
+        var el = document.querySelector('.cta-subtext');
+        if(el) el.textContent = 'Contacte-nos para realizar a ' + title + ' do seu equipamento.';
+      })();
+    </script>
+
+  </main>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
