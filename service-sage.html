@@ -7,59 +7,68 @@
   <title>Sage — Implementação e Formação | LOCASOFT</title>
   <meta name="description" content="Implementação, parametrização e formação Sage para PME. Automatize faturação e controle stocks com suporte local LOCASOFT.">
   <meta property="og:image" content="assets/img/about/about-8-800.webp">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <style>
+    /* Minimalista */
+    .feature-item {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid #eee;
+      transition: all 0.2s ease;
+    }
     .feature-item:hover {
-      transform: translateY(-8px) scale(1.02);
-      transition: all 0.3s ease;
-      box-shadow: 0 15px 35px rgba(0, 166, 81, 0.2);
+      background: #fafafa;
+      border-color: #ddd;
+    }
+    .benefit-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid #eee;
+      transition: all 0.2s ease;
     }
     .benefit-card:hover {
-      transform: translateY(-5px);
-      transition: all 0.3s ease;
-      box-shadow: 0 10px 25px rgba(0, 94, 184, 0.15);
+      background: #fafafa;
+      border-color: #ddd;
+    }
+    .step {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid #eee;
+      transition: all 0.2s ease;
     }
     .step:hover {
-      transform: translateY(-5px);
-      transition: all 0.3s ease;
-      box-shadow: 0 10px 25px rgba(0, 166, 81, 0.15);
+      background: #fafafa;
+      border-color: #ddd;
+    }
+    .testimonial {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid #eee;
+      transition: all 0.2s ease;
     }
     .testimonial:hover {
-      transform: translateY(-5px);
-      transition: all 0.3s ease;
-      box-shadow: 0 10px 25px rgba(0, 94, 184, 0.15);
+      background: #fafafa;
+      border-color: #ddd;
     }
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .feature-icon {
+      color: #0066cc;
+      font-size: 28px;
+      margin-bottom: 1rem;
     }
     .section-title h2 {
-      animation: fadeInUp 0.8s ease-out;
+      font-weight: 600;
     }
     .btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-    }
-    .feature-icon {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .feature-item:hover .feature-icon {
-      transform: scale(1.1) rotate(5deg);
-      box-shadow: 0 8px 20px rgba(0, 102, 204, 0.3);
-    }
-    .step-number {
-      transition: transform 0.3s ease;
-    }
-    .step:hover .step-number {
-      transform: scale(1.1);
     }
     .service-cta::before {
       content: '';
@@ -68,17 +77,16 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="rgba(255,255,255,0.1)"/></svg>');
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="rgba(255,255,255,0.05)"/></svg>');
       pointer-events: none;
     }
-    /* Mobile Optimization */
+    /* Mobile */
     @media (max-width: 768px) {
       .service-hero {
         padding: 40px 0 !important;
       }
       .service-hero h1 {
         font-size: 28px;
-        line-height: 1.3;
         margin-bottom: 20px;
       }
       .service-hero .lead {
@@ -94,10 +102,10 @@
         padding: 12px 20px;
       }
       .features-grid {
-        row-gap: 25px;
+        row-gap: 20px;
       }
       .feature-item {
-        padding: 25px 20px;
+        padding: 1.5rem;
       }
       .feature-item h4 {
         font-size: 16px;
@@ -115,6 +123,9 @@
       }
       .service-cta .p-4 {
         padding: 20px !important;
+      }
+      .step {
+        margin-left: 40px;
       }
     }
   </style>
@@ -148,8 +159,7 @@
 
   <main class="main">
     <!-- Hero -->
-    <section class="service-hero section" aria-labelledby="service-title" style="background: linear-gradient(135deg, #e8f2ff 0%, #fff5e6 100%); position: relative; overflow: hidden;">
-      <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 20% 80%, rgba(0, 102, 204, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255, 102, 0, 0.1) 0%, transparent 50%);"></div>
+    <section class="service-hero section" aria-labelledby="service-title" style="background: #f9f9f9; position: relative; overflow: hidden;">
       <div class="container position-relative">
         <div class="row align-items-center gy-4">
           <div class="col-lg-7" data-aos="fade-up">
@@ -157,51 +167,46 @@
             <h1 id="service-title" style="color: #1a3a5c;">Sage</h1>
             <p class="lead service-overview">Instalação, parametrização e formação para as soluções Sage adaptadas ao seu negócio — automatize faturação, stocks e relatórios com confiança.</p>
             <div class="d-flex gap-2 mt-3">
-              <a href="index.html#contact" class="btn btn-primary btn-lg" style="background: linear-gradient(135deg, #0066cc, #ff6600); border: none; box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);" aria-label="Peça uma demonstração Sage">Peça demonstração</a>
-              <a href="#features" class="btn btn-outline-primary btn-lg" style="border-color: #0066cc; color: #0066cc;" aria-label="Ver funcionalidades">Ver funcionalidades</a>
+              <a href="index.html#contact" class="btn btn-primary" style="background: #0066cc; border: none;" aria-label="Peça uma demonstração Sage">Peça demonstração</a>
+              <a href="#features" class="btn btn-outline-primary" style="border-color: #0066cc; color: #0066cc;" aria-label="Ver funcionalidades">Ver funcionalidades</a>
             </div>
           </div>
           <div class="col-lg-5" data-aos="fade-left">
-            <div style="position: relative;">
-              <img src="assets/img/services/services-1.webp" alt="Sage" class="img-fluid service-image" style="border-radius: 1rem; box-shadow: 0 20px 40px rgba(0, 102, 204, 0.2); transition: transform 0.3s ease;" loading="lazy" decoding="async" width="700" height="520">
-              <div style="position: absolute; top: -10px; right: -10px; background: linear-gradient(135deg, #0066cc, #ff6600); color: white; padding: 8px 12px; border-radius: 50%; box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);">
-                <i class="bi bi-check-circle-fill"></i>
-              </div>
-            </div>
+            <img src="assets/img/services/services-1.webp" alt="Sage" class="img-fluid service-image" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);" loading="lazy" decoding="async" width="700" height="520">
           </div>
         </div>
       </div>
     </section>
 
     <!-- Features -->
-    <section id="features" class="section" style="background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);">
+    <section id="features" class="section">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
-          <span class="subtitle" style="color: #0066cc;">Funcionalidades</span>
-          <h2 style="color: #1a3a5c;">O que entregamos</h2>
+          <span class="subtitle">Funcionalidades</span>
+          <h2>O que entregamos</h2>
         </div>
 
         <div class="features-grid mt-4">
-          <div class="feature-item" style="border: 1px solid rgba(0, 102, 204, 0.1); background: linear-gradient(135deg, #ffffff 0%, #e8f2ff 100%);">
-            <div class="feature-icon" style="background: linear-gradient(135deg, #0066cc, #ff6600); color: white;"><i class="bi bi-gear"></i></div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="bi bi-gear"></i></div>
             <div>
-              <h4 style="color: #1a3a5c;">Instalação & Configuração</h4>
+              <h4>Instalação & Configuração</h4>
               <p class="mb-0">Instalação do sistema, parametrização inicial e integração com equipamentos.</p>
             </div>
           </div>
 
-          <div class="feature-item" style="border: 1px solid rgba(255, 102, 0, 0.1); background: linear-gradient(135deg, #ffffff 0%, #fff5e6 100%);">
-            <div class="feature-icon" style="background: linear-gradient(135deg, #ff6600, #0066cc); color: white;"><i class="bi bi-sliders"></i></div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="bi bi-sliders"></i></div>
             <div>
-              <h4 style="color: #1a3a5c;">Parametrização Avançada</h4>
+              <h4>Parametrização Avançada</h4>
               <p class="mb-0">Mapeamento de processos, automações e definição de regras de faturação e stocks.</p>
             </div>
           </div>
 
-          <div class="feature-item" style="border: 1px solid rgba(0, 102, 204, 0.1); background: linear-gradient(135deg, #ffffff 0%, #e8f2ff 100%);">
-            <div class="feature-icon" style="background: linear-gradient(135deg, #0066cc, #ff6600); color: white;"><i class="bi bi-people"></i></div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="bi bi-people"></i></div>
             <div>
-              <h4 style="color: #1a3a5c;">Formação & Suporte</h4>
+              <h4>Formação & Suporte</h4>
               <p class="mb-0">Sessões práticas para a equipa e suporte pós-implementação com SLA opcional.</p>
             </div>
           </div>
@@ -210,26 +215,26 @@
     </section>
 
     <!-- Benefits & Process -->
-    <section class="section" style="background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);">
+    <section class="section" style="background: #fafafa;">
       <div class="container" data-aos="fade-up">
         <div class="row gy-4">
           <div class="col-lg-7">
             <div class="section-title">
-              <span class="subtitle" style="color: #0066cc;">Benefícios</span>
-              <h2 style="color: #1a3a5c;">Resultados que importam</h2>
+              <span class="subtitle">Benefícios</span>
+              <h2>Resultados que importam</h2>
             </div>
 
             <div class="benefits-row mt-3">
-              <div class="benefit-card" style="background: linear-gradient(135deg, #ffffff 0%, #e8f2ff 100%); border: 1px solid rgba(0, 102, 204, 0.1);">
-                <h5 style="color: #0066cc;">Faturação mais rápida</h5>
+              <div class="benefit-card" style="background: white; border: 1px solid #eee; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0, 0, 0, 0.05)';">
+                <h5 style="color: #0066cc;"><i class="bi bi-file-earmark-check me-2" style="color: #0066cc;"></i>Faturação mais rápida</h5>
                 <p class="mb-0">Reduza o tempo de emissão de documentos e erros manuais com templates e automações.</p>
               </div>
-              <div class="benefit-card" style="background: linear-gradient(135deg, #ffffff 0%, #fff5e6 100%); border: 1px solid rgba(255, 102, 0, 0.1);">
-                <h5 style="color: #ff6600;">Controlo de stocks</h5>
+              <div class="benefit-card" style="background: white; border: 1px solid #eee; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0, 0, 0, 0.05)';">
+                <h5 style="color: #ff6600;"><i class="bi bi-box-seam me-2" style="color: #ff6600;"></i>Controlo de stocks</h5>
                 <p class="mb-0">Gestão centralizada de artigos, alertas de reposição e relatórios por fornecedor.</p>
               </div>
-              <div class="benefit-card" style="background: linear-gradient(135deg, #ffffff 0%, #e8f2ff 100%); border: 1px solid rgba(0, 102, 204, 0.1);">
-                <h5 style="color: #0066cc;">Menos falhas operacionais</h5>
+              <div class="benefit-card" style="background: white; border: 1px solid #eee; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0, 0, 0, 0.05)';">
+                <h5 style="color: #0066cc;"><i class="bi bi-shield-check me-2" style="color: #0066cc;"></i>Menos falhas operacionais</h5>
                 <p class="mb-0">Processos testados e formação reduzem erros e melhoram confiança da equipa.</p>
               </div>
             </div>
@@ -238,29 +243,28 @@
 
           <div class="col-lg-5">
             <div class="section-title">
-              <span class="subtitle" style="color: #ff6600;">Processo</span>
-              <h2 style="color: #1a3a5c;">Como trabalhamos</h2>
+              <span class="subtitle">Processo</span>
+              <h2>Como trabalhamos</h2>
             </div>
 
-            <div class="process-steps mt-3" style="display: flex; flex-direction: column; gap: 1.5rem; position: relative;">
-              <div style="position: absolute; left: 20px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, #0066cc, #ff6600); z-index: 1;"></div>
-              <div class="step" style="background: linear-gradient(135deg, #ffffff 0%, #e8f2ff 100%); border: 1px solid rgba(0, 102, 204, 0.1); position: relative; margin-left: 40px;">
-                <div class="step-number" style="background: linear-gradient(135deg, #0066cc, #ff6600); color: white; position: absolute; left: -50px; top: 50%; transform: translateY(-50%);">1</div>
+            <div class="process-steps mt-3" style="display: flex; flex-direction: column; gap: 2rem; position: relative;">
+              <div class="step" style="position: relative; margin-left: 70px;">
+                <div class="step-number" style="background: #0066cc; color: white; position: absolute; left: -64px; top: 0; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 20px; box-shadow: 0 2px 8px rgba(0, 102, 204, 0.2);">1</div>
                 <h6 class="mb-1" style="color: #1a3a5c;">Avaliação</h6>
                 <p class="small mb-0">Análise do ambiente e necessidades.</p>
               </div>
-              <div class="step" style="background: linear-gradient(135deg, #ffffff 0%, #fff5e6 100%); border: 1px solid rgba(255, 102, 0, 0.1); position: relative; margin-left: 40px;">
-                <div class="step-number" style="background: linear-gradient(135deg, #ff6600, #0066cc); color: white; position: absolute; left: -50px; top: 50%; transform: translateY(-50%);">2</div>
+              <div class="step" style="position: relative; margin-left: 70px;">
+                <div class="step-number" style="background: #ff6600; color: white; position: absolute; left: -64px; top: 0; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 20px; box-shadow: 0 2px 8px rgba(255, 102, 0, 0.2);">2</div>
                 <h6 class="mb-1" style="color: #1a3a5c;">Implementação</h6>
                 <p class="small mb-0">Parametrização e testes em ambiente controlado.</p>
               </div>
-              <div class="step" style="background: linear-gradient(135deg, #ffffff 0%, #e8f2ff 100%); border: 1px solid rgba(0, 102, 204, 0.1); position: relative; margin-left: 40px;">
-                <div class="step-number" style="background: linear-gradient(135deg, #0066cc, #ff6600); color: white; position: absolute; left: -50px; top: 50%; transform: translateY(-50%);">3</div>
+              <div class="step" style="position: relative; margin-left: 70px;">
+                <div class="step-number" style="background: #0066cc; color: white; position: absolute; left: -64px; top: 0; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 20px; box-shadow: 0 2px 8px rgba(0, 102, 204, 0.2);">3</div>
                 <h6 class="mb-1" style="color: #1a3a5c;">Formação</h6>
                 <p class="small mb-0">Sessões práticas para utilizadores chave.</p>
               </div>
-              <div class="step" style="background: linear-gradient(135deg, #ffffff 0%, #fff5e6 100%); border: 1px solid rgba(255, 102, 0, 0.1); position: relative; margin-left: 40px;">
-                <div class="step-number" style="background: linear-gradient(135deg, #ff6600, #0066cc); color: white; position: absolute; left: -50px; top: 50%; transform: translateY(-50%);">4</div>
+              <div class="step" style="position: relative; margin-left: 70px;">
+                <div class="step-number" style="background: #ff6600; color: white; position: absolute; left: -64px; top: 0; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 20px; box-shadow: 0 2px 8px rgba(255, 102, 0, 0.2);">4</div>
                 <h6 class="mb-1" style="color: #1a3a5c;">Suporte</h6>
                 <p class="small mb-0">Suporte continuado e otimizações.</p>
               </div>
@@ -271,23 +275,23 @@
     </section>
 
     <!-- Testimonials -->
-    <section class="section" style="background: linear-gradient(135deg, #e8f2ff 0%, #fff5e6 100%);">
+    <section class="section" style="background: #f9f9f9;">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
-          <span class="subtitle" style="color: #0066cc;">Provas</span>
-          <h2 style="color: #1a3a5c;">Clientes e resultados</h2>
+          <span class="subtitle">Provas</span>
+          <h2>Clientes e resultados</h2>
         </div>
         <div class="row mt-3">
           <div class="col-md-6">
-            <div class="testimonial" style="background: linear-gradient(135deg, #ffffff 0%, #e8f2ff 100%); border: 1px solid rgba(0, 102, 204, 0.1); box-shadow: 0 10px 30px rgba(0, 102, 204, 0.1);">
-              <p class="mb-1" style="color: #333;">"Implementação rápida, equipa competente e suporte que faz a diferença."</p>
-              <p class="small mb-0" style="color: #0066cc;"><strong>— Cliente PME</strong></p>
+            <div class="testimonial">
+              <p class="mb-1" style="color: #333; font-style: italic;">"Implementação rápida, equipa competente e suporte que faz a diferença."</p>
+              <p class="small mb-0" style="color: #666;"><strong>— Cliente PME</strong></p>
             </div>
           </div>
           <div class="col-md-6">
-            <div class="testimonial" style="background: linear-gradient(135deg, #ffffff 0%, #fff5e6 100%); border: 1px solid rgba(255, 102, 0, 0.1); box-shadow: 0 10px 30px rgba(255, 102, 0, 0.1);">
-              <p class="mb-1" style="color: #333;">"Automatizámos 70% dos processos de faturação — redução de erros imediata."</p>
-              <p class="small mb-0" style="color: #ff6600;"><strong>— Restaurante Local</strong></p>
+            <div class="testimonial">
+              <p class="mb-1" style="color: #333; font-style: italic;">"Automatizámos 70% dos processos de faturação — redução de erros imediata."</p>
+              <p class="small mb-0" style="color: #666;"><strong>— Restaurante Local</strong></p>
             </div>
           </div>
         </div>
@@ -295,32 +299,34 @@
     </section>
 
     <!-- Sticky contact CTA -->
-    <div class="sticky-contact" style="background: linear-gradient(135deg, #0066cc, #ff6600); color: white; box-shadow: 0 8px 30px rgba(0, 102, 204, 0.3);" role="dialog" aria-label="Contacte-nos rapidamente">
+    <div class="sticky-contact" style="background: #0066cc; color: white; box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);" role="dialog" aria-label="Contacte-nos rapidamente">
       <div>
         <strong style="color: white;">Precisa de ajuda?</strong>
         <div class="small" style="color: rgba(255, 255, 255, 0.9);">Consultoria e demonstrações Sage</div>
       </div>
       <div class="ms-auto">
-        <a href="index.html#contact" class="btn btn-primary" style="background: white; color: #0066cc; border: none;">Contacte</a>
+        <a href="index.html#contact" class="btn btn-light btn-sm">Contacte</a>
       </div>
     </div>
 
     <!-- CTA -->
-    <section class="service-cta py-5" style="background: linear-gradient(135deg, #0066cc 0%, #ff6600 100%); color: white; position: relative; overflow: hidden;">
+    <section class="service-cta py-5" style="background: #0066cc; color: white; position: relative; overflow: hidden;">
       <div class="container position-relative">
-        <div class="p-4 p-md-5 rounded-3 text-center" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
-          <h2 class="fw-bold" style="color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Precisa de assistência?</h2>
-          <p class="mb-4 cta-subtext" style="color: rgba(255, 255, 255, 0.9); font-size: 1.1rem;">Contacte-nos para realizar o seu serviço.</p>
-          <a href="index.html#contact" class="btn btn-lg" style="background: linear-gradient(135deg, #ffffff, #f0f0f0); color: #0066cc; border: none; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); padding: 12px 30px; border-radius: 25px; font-weight: 600; transition: all 0.3s ease;">Fale connosco</a>
+        <div class="p-4 p-md-5 rounded-3 text-center" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);">
+          <h2 class="fw-bold" style="color: white;">Precisa de assistência?</h2>
+          <p class="mb-4 cta-subtext" style="color: rgba(255, 255, 255, 0.9); font-size: 1rem;">Contacte-nos para realizar o seu serviço.</p>
+          <a href="index.html#contact" class="btn btn-light" style="border: none; padding: 10px 25px;">Fale connosco</a>
         </div>
       </div>
     </section>
 
     <script>
       (function(){
-        var title = document.querySelector('.service-title').innerText.trim();
+        var titleEl = document.querySelector('#service-title') || document.querySelector('.service-title');
         var el = document.querySelector('.cta-subtext');
-        if(el) el.textContent = 'Contacte-nos para implementar e otimizar o ' + title + ' para a sua organização.';
+        if (!titleEl || !el) return;
+        var title = titleEl.innerText.trim();
+        el.textContent = 'Contacte-nos para implementar e otimizar o ' + title + ' para a sua organização.';
       })();
     </script>
 
