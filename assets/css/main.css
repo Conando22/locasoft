@@ -918,24 +918,49 @@ section,
   padding: 120px 0 100px;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, #e8f2ff 0%, #f0f7ff 50%, #ffffff 100%);
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url("../img/locasoft_frente.png") center/cover no-repeat;
+  color: #ffffff;
 }
 
-/* Decorative cloud shapes in background */
-.hero::before {
-  content: "";
-  position: absolute;
-  top: -50px;
-  right: 10%;
-  width: 300px;
-  height: 200px;
-  background: rgba(0, 102, 204, 0.08);
-  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-  filter: blur(40px);
-  z-index: 0;
-  pointer-events: none;
+/* Make hero text fully readable */
+.hero h1,
+.hero .lead,
+.hero .btn {
+  color: #ffffff !important;
 }
 
+.hero h1,
+.hero .lead {
+  text-shadow: 0 12px 28px rgba(0, 0, 0, 0.75);
+}
+
+.hero .btn {
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.45);
+}
+
+/* Hide the right-side hero image so only the background image remains */
+.hero .col-lg-5 {
+  display: none;
+}
+
+/* Ensure hero text is legible on the image */
+.hero h1,
+.hero .lead,
+.hero .btn {
+  color: rgba(255,255,255,0.95);
+}
+
+.hero h1,
+.hero .lead {
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.hero .btn {
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+/* Keep a subtle blue glow for extra depth */
 .hero::after {
   content: "";
   position: absolute;
@@ -964,11 +989,11 @@ section,
 .service-hero { margin-bottom: 1.25rem; }
 .service-hero .img-fluid { border-radius: .5rem; box-shadow: 0 8px 24px rgba(8,24,48,0.06); }
 .service-overview { margin-bottom: 1.5rem; }
-.features-grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:1rem; }
+.features-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:1rem; }
 .feature-item { background: var(--card-bg, #fff); border-radius: .5rem; padding:1rem; display:flex; gap:0.75rem; align-items:flex-start; border:1px solid rgba(0,0,0,0.04); transition: transform .12s ease, box-shadow .12s ease; }
 .feature-item:hover{ transform: translateY(-6px); box-shadow: 0 12px 30px rgba(12,24,48,0.06); }
 .feature-icon { width:52px; height:52px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; background: rgba(0,102,204,0.06); color: var(--accent-color, #0066cc); font-size:22px; }
-.benefits-row { display:grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap:1rem; margin-top:1rem; }
+.benefits-row { display:grid; grid-template-columns: repeat(2, 1fr); gap:1rem; margin-top:1rem; }
 .benefit-card { padding:1rem; border-radius:.5rem; background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(250,250,250,0.98)); border:1px solid rgba(0,0,0,0.04); box-shadow: 0 8px 24px rgba(8,24,48,0.04); }
 .process-steps { display:flex; gap:1rem; flex-wrap:wrap; margin-top:1rem; }
 .step { flex:1 1 140px; padding:1rem; border-radius:.5rem; background:#fff; border:1px solid rgba(0,0,0,0.04); text-align:center; }
@@ -988,11 +1013,36 @@ section,
 .feature-item { padding:1.25rem; }
 .benefit-card { padding:1.25rem; }
 .step { padding:1.25rem; }
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(to right, var(--accent-color) 0%, var(--accent-color) 50%, var(--accent-orange) 50%, var(--accent-orange) 100%);
-  z-index: 1;
+
+/* Service pages typography fixes */
+.service-details-page .feature-item h4 { font-size: 1.08rem; line-height: 1.35; margin-bottom: 0.4rem; }
+.service-details-page .feature-item p { font-size: 0.95rem; line-height: 1.55; }
+.service-details-page .benefit-card h5 { font-size: 1rem; line-height: 1.35; margin-bottom: 0.45rem; }
+.service-details-page .benefit-card p { font-size: 0.94rem; line-height: 1.5; }
+.service-details-page .step h6 { font-size: 1rem; line-height: 1.35; font-weight: 600; }
+.service-details-page .step p,
+.service-details-page .step p.small {
+  font-size: 0.93rem !important;
+  line-height: 1.55;
+  color: color-mix(in srgb, var(--default-color), transparent 15%);
+}
+.service-details-page .process-steps .small {
+  font-size: 0.93rem !important;
+}
+.service-details-page .section-title .subtitle {
+  letter-spacing: 0.08em;
+}
+
+/* Responsive grid for features and benefits */
+@media (max-width: 992px) {
+  .features-grid { grid-template-columns: repeat(2, 1fr); }
+  .benefits-row { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .features-grid { grid-template-columns: 1fr; }
+  .benefits-row { grid-template-columns: 1fr; }
+  .process-steps { flex-direction: column; }
 }
 
 .hero h1 {

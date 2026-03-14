@@ -97,6 +97,7 @@
    * Animation on scroll function and init
    */
   function aosInit() {
+    if (typeof AOS === 'undefined') return;
     AOS.init({
       duration: 600,
       easing: 'ease-in-out',
@@ -109,14 +110,18 @@
   /**
    * Initiate glightbox
    */
-  const glightbox = GLightbox({
-    selector: '.glightbox'
-  });
+  if (typeof GLightbox !== 'undefined') {
+    GLightbox({
+      selector: '.glightbox'
+    });
+  }
 
   /**
    * Initiate Pure Counter
    */
-  new PureCounter();
+  if (typeof PureCounter !== 'undefined') {
+    new PureCounter();
+  }
 
   /**
    * Init isotope layout and filters
@@ -125,6 +130,8 @@
     let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
     let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
     let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
+
+    if (typeof imagesLoaded === 'undefined' || typeof Isotope === 'undefined') return;
 
     let initIsotope;
     imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
@@ -138,6 +145,7 @@
 
     isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
       filters.addEventListener('click', function() {
+        if (!initIsotope) return;
         isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
         this.classList.add('filter-active');
         initIsotope.arrange({
@@ -161,9 +169,15 @@
       );
 
       if (swiperElement.classList.contains("swiper-tab")) {
-        initSwiperWithCustomPagination(swiperElement, config);
+        if (typeof initSwiperWithCustomPagination === 'function') {
+          initSwiperWithCustomPagination(swiperElement, config);
+        } else if (typeof Swiper !== 'undefined') {
+          new Swiper(swiperElement, config);
+        }
       } else {
-        new Swiper(swiperElement, config);
+        if (typeof Swiper !== 'undefined') {
+          new Swiper(swiperElement, config);
+        }
       }
     });
   }
