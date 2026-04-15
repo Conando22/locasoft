@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>404 - Axis Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary-gradient: linear-gradient(135deg, #0066cc, #ff6600);
+      --secondary-gradient: linear-gradient(180deg, #e8f2ff 0%, #fff5e6 100%);
+    }
+
+    .page-404 {
+      background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    }
+
+    .error-404 {
+      padding: 100px 0;
+      background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .error-404::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 80% 20%, rgba(0, 102, 204, 0.08) 0%, transparent 50%),
+                  radial-gradient(circle at 20% 80%, rgba(255, 102, 0, 0.08) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .error-number {
+      font-size: 180px;
+      font-weight: 900;
+      background: var(--primary-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 20px;
+      text-shadow: 0 10px 30px rgba(0, 102, 204, 0.15);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .error-title {
+      font-size: 48px;
+      color: #1a3a5c;
+      margin-bottom: 20px;
+      font-weight: 700;
+      animation: slideDown 0.8s ease-out;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .error-description {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 30px;
+      line-height: 1.6;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .error-actions {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      margin-bottom: 50px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary, .btn-secondary {
+      padding: 14px 35px;
+      border-radius: 25px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: inline-block;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .btn-primary {
+      background: var(--primary-gradient);
+      color: white;
+      box-shadow: 0 8px 25px rgba(0, 102, 204, 0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(0, 102, 204, 0.4);
+    }
+
+    .btn-secondary {
+      background: #f0f0f0;
+      color: #1a3a5c;
+      border: 2px solid #e0e0e0;
+    }
+
+    .btn-secondary:hover {
+      background: white;
+      border-color: #0066cc;
+      color: #0066cc;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 102, 204, 0.2);
+    }
+
+    .search-section {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 102, 204, 0.08);
+      margin: 40px auto;
+      max-width: 600px;
+      border: 1px solid rgba(0, 102, 204, 0.1);
+    }
+
+    .search-label {
+      color: #1a3a5c;
+      font-weight: 600;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    .search-input-group {
+      display: flex;
+      gap: 10px;
+    }
+
+    .search-input {
+      flex: 1;
+      padding: 14px 20px;
+      border: 2px solid #e0e0e0;
+      border-radius: 15px;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      font-family: inherit;
+    }
+
+    .search-input:focus {
+      outline: none;
+      border-color: #0066cc;
+      box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+    }
+
+    .search-btn {
+      padding: 14px 25px;
+      background: var(--primary-gradient);
+      color: white;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .search-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 102, 204, 0.3);
+    }
+
+    .helpful-links {
+      margin-top: 80px;
+    }
+
+    .links-title {
+      font-size: 28px;
+      color: #1a3a5c;
+      text-align: center;
+      margin-bottom: 50px;
+      font-weight: 700;
+    }
+
+    .link-item {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 20px;
+      text-align: center;
+      transition: all 0.3s ease;
+      border: 2px solid rgba(0, 102, 204, 0.1);
+      height: 100%;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .link-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(0, 102, 204, 0.05) 0%, rgba(255, 102, 0, 0.05) 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .link-item:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 20px 50px rgba(0, 102, 204, 0.15);
+      border-color: #0066cc;
+    }
+
+    .link-item:hover::before {
+      opacity: 1;
+    }
+
+    .link-item > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .link-icon {
+      width: 80px;
+      height: 80px;
+      background: var(--primary-gradient);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      color: white;
+      margin: 0 auto 25px;
+      box-shadow: 0 10px 30px rgba(0, 102, 204, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .link-item:hover .link-icon {
+      transform: scale(1.1) rotate(-10deg);
+      box-shadow: 0 15px 40px rgba(0, 102, 204, 0.3);
+    }
+
+    .link-item h4 {
+      color: #1a3a5c;
+      font-weight: 700;
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
+
+    .link-item p {
+      color: #666;
+      margin-bottom: 25px;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    .link-cta {
+      color: #0066cc;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+      font-size: 14px;
+    }
+
+    .link-cta:hover {
+      color: #ff6600;
+      gap: 12px;
+    }
+    /* Mobile Optimization */
+    @media (max-width: 768px) {
+      .error-404 {
+        padding: 50px 0;
+      }
+      .error-number {
+        font-size: 120px;
+        margin-bottom: 15px;
+      }
+      .error-title {
+        font-size: 28px;
+        margin-bottom: 15px;
+      }
+      .error-description {
+        font-size: 15px;
+        margin-bottom: 20px;
+      }
+      .error-actions {
+        margin-bottom: 30px;
+      }
+      .btn-primary, .btn-secondary {
+        padding: 12px 25px;
+        font-size: 14px;
+      }
+      .search-section {
+        padding: 25px 20px;
+        margin: 30px auto;
+      }
+      .search-label {
+        font-size: 14px;
+        margin-bottom: 15px;
+      }
+      .search-input {
+        padding: 12px 16px;
+        font-size: 14px;
+      }
+      .search-btn {
+        padding: 12px 18px;
+        font-size: 14px;
+      }
+      .links-title {
+        font-size: 22px;
+        margin-bottom: 35px;
+      }
+      .link-item {
+        padding: 30px 20px;
+      }
+      .link-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 28px;
+        margin: 0 auto 18px;
+      }
+      .link-item h4 {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+      .link-item p {
+        font-size: 13px;
+        margin-bottom: 18px;
+      }
+      .link-cta {
+        font-size: 13px;
+      }
+    }
+    @media (max-width: 480px) {
+      .error-number {
+        font-size: 80px;
+      }
+      .error-title {
+        font-size: 22px;
+      }
+      .links-title {
+        font-size: 18px;
+        margin-bottom: 25px;
+      }
+      .link-item {
+        padding: 20px 15px;
+      }
+      .link-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+      }
+    }
+  </style>
+
+  <!-- =======================================================
+  * Template Name: Axis
+  * Template URL: https://bootstrapmade.com/axis-bootstrap-corporate-template/
+  * Updated: Sep 13 2025 with Bootstrap v5.3.8
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="page-404">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.webp" alt=""> -->
+        <h1 class="sitename">Axis</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Error 404 Section -->
+    <section id="error-404" class="error-404 section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-8">
+
+            <div class="error-content">
+              <div class="error-number" data-aos="zoom-in" data-aos-delay="200">404</div>
+
+              <h1 class="error-title" data-aos="fade-up" data-aos-delay="300">Page Not Found</h1>
+
+              <p class="error-description" data-aos="fade-up" data-aos-delay="400">
+                The page you are looking for might have been removed, had its name changed, or is temporarily unavailable. We apologize for any inconvenience.
+              </p>
+
+              <div class="error-actions" data-aos="fade-up" data-aos-delay="500">
+                <a href="/" class="btn-primary">Return Home</a>
+                <a href="/contact" class="btn-secondary">Contact Support</a>
+              </div>
+
+              <div class="search-section" data-aos="fade-up" data-aos-delay="600">
+                <p class="search-label">Or search for what you need:</p>
+                <form class="search-form">
+                  <div class="search-input-group">
+                    <input type="text" class="search-input" placeholder="Search our website..." required="">
+                    <button type="submit" class="search-btn">
+                      <i class="bi bi-search"></i>
+                    </button>
+                  </div>
+                </form>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <div class="helpful-links" data-aos="fade-up" data-aos-delay="700">
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+
+              <h3 class="links-title">You might be looking for:</h3>
+
+              <div class="row">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="800">
+                  <div class="link-item">
+                    <div class="link-icon">
+                      <i class="bi bi-house-door"></i>
+                    </div>
+                    <h4>Homepage</h4>
+                    <p>Return to our main page to explore our latest updates and featured content.</p>
+                    <a href="/" class="link-cta">Go to Homepage <i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </div>
+
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="900">
+                  <div class="link-item">
+                    <div class="link-icon">
+                      <i class="bi bi-briefcase"></i>
+                    </div>
+                    <h4>Services</h4>
+                    <p>Discover our comprehensive range of business solutions and professional services.</p>
+                    <a href="/services" class="link-cta">View Services <i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </div>
+
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="1000">
+                  <div class="link-item">
+                    <div class="link-icon">
+                      <i class="bi bi-envelope"></i>
+                    </div>
+                    <h4>Contact Us</h4>
+                    <p>Get in touch with our team for personalized assistance and support.</p>
+                    <a href="/contact" class="link-cta">Contact Us <i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Error 404 Section -->
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container footer-top py-5">
+      <div class="row gy-4">
+        <div class="col-lg-3 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center mb-3">
+            <span class="sitename">Axis</span>
+          </a>
+          <p>Implementação e suporte local para Sage e WinRest, fornecimento de hardware e assistência técnica para PME.</p>
+          <div class="social-links d-flex mt-4">
+            <a href="#" style="width:40px;height:40px;border:1px solid rgba(255,255,255,0.08);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;margin-right:8px;color:inherit;text-decoration:none;"><i class="bi bi-x-lg"></i></a>
+            <a href="#" style="width:40px;height:40px;border:1px solid rgba(255,255,255,0.08);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;margin-right:8px;color:inherit;text-decoration:none;"><i class="bi bi-facebook"></i></a>
+            <a href="#" style="width:40px;height:40px;border:1px solid rgba(255,255,255,0.08);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;margin-right:8px;color:inherit;text-decoration:none;"><i class="bi bi-instagram"></i></a>
+            <a href="#" style="width:40px;height:40px;border:1px solid rgba(255,255,255,0.08);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:inherit;text-decoration:none;"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-6 footer-links">
+          <h4>Links</h4>
+          <ul>
+            <li><a href="index.html#hero">Home</a></li>
+            <li><a href="index.html#about">Sobre Nós</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-6 footer-links">
+          <h4>Serviços</h4>
+          <ul>
+            <li><a href="service-sage.html">Sage</a></li>
+            <li><a href="service-winrest.html">WinRest</a></li>
+            <li><a href="service-vendas.html">Venda de Hardware</a></li>
+            <li><a href="service-reparacao.html">Reparação e Manutenção</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-start">
+          <h4>Contacto</h4>
+          <p>R. dos Sobreiros 409<br>4900-913 Viana do Castelo<br>Portugal</p>
+          <p class="mt-3"><strong>Phone:</strong> <span>258 828 322</span></p>
+          <p><strong>Email:</strong> <span>geral@locasoft.pt</span></p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4 py-3" style="border-top:1px solid rgba(255,255,255,0.04)">
+      <p class="mb-0">© <strong class="px-1 sitename">Axis</strong> All Rights Reserved</p>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

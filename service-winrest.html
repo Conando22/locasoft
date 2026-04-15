@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>WinRest — Solução POS para Restauração | LOCASOFT</title>
+  <meta name="description" content="WinRest POS: gestão de mesas, pedidos e integração com impressoras/terminals. Soluções para restaurantes, cafés e bares.">
+  <meta property="og:image" content="assets/img/about/about-8-800.webp">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    /* Minimalista */
+    .feature-item {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid #eee;
+      transition: all 0.2s ease;
+    }
+    .feature-item:hover {
+      background: #fafafa;
+      border-color: #ddd;
+    }
+    .benefit-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid #eee;
+      transition: all 0.2s ease;
+    }
+    .benefit-card:hover {
+      background: #fafafa;
+      border-color: #ddd;
+    }
+    .step {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid #eee;
+      transition: all 0.2s ease;
+    }
+    .step:hover {
+      background: #fafafa;
+      border-color: #ddd;
+    }
+    .testimonial {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid #eee;
+      transition: all 0.2s ease;
+    }
+    .testimonial:hover {
+      background: #fafafa;
+      border-color: #ddd;
+    }
+    .feature-icon {
+      color: #0066cc;
+      font-size: 28px;
+      margin-bottom: 1rem;
+    }
+    .section-title h2 {
+      font-weight: 600;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+    .service-cta::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="rgba(255,255,255,0.05)"/></svg>');
+      pointer-events: none;
+    }
+    /* Mobile */
+    @media (max-width: 768px) {
+      .service-hero {
+        padding: 40px 0 !important;
+      }
+      .service-hero h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
+      .service-hero .lead {
+        font-size: 15px;
+        margin-bottom: 25px;
+      }
+      .service-hero .d-flex {
+        flex-direction: column;
+        gap: 12px;
+      }
+      .service-hero .btn {
+        width: 100%;
+        padding: 12px 20px;
+      }
+      .features-grid {
+        row-gap: 20px;
+      }
+      .feature-item {
+        padding: 1.5rem;
+      }
+      .feature-item h4 {
+        font-size: 16px;
+      }
+      .section-title h2 {
+        font-size: 26px;
+      }
+      .sticky-contact {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px !important;
+      }
+      .sticky-contact .btn {
+        width: 100%;
+      }
+      .service-cta .p-4 {
+        padding: 20px !important;
+      }
+      .step {
+        margin-left: 40px;
+      }
+    }
+  </style>
+</head>
+
+<body class="service-details-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.webp" alt=""> -->
+        <h1 class="sitename">
+          <span class="logo-loca">LOCA</span><span class="logo-soft">SOFT</span>
+        </h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#hero">Home</a></li>
+          <li><a href="index.html#about">Sobre Nós</a></li>
+          <li><a href="index.html#services">Serviços</a></li>
+          <li><a href="index.html#contact">Contacto</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- Hero -->
+    <section class="service-hero section" aria-labelledby="service-title" style="background: #f9f9f9; position: relative; overflow: hidden;">
+      <div class="container position-relative">
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-7" data-aos="fade-up">
+            <span class="subtitle" style="color: #0066cc; font-weight: 600;">Serviço</span>
+            <h1 id="service-title" style="color: #1a3a5c;">WinRest</h1>
+            <p class="lead service-overview">Solução POS especializada para restauração — gestão de mesas, pedidos e integração com impressoras e pagamentos.</p>
+            <div class="d-flex gap-2 mt-3">
+              <a href="index.html#contact" class="btn btn-primary" style="background: #0066cc; border: none;" aria-label="Peça demonstração WinRest">Peça demonstração</a>
+              <a href="#features" class="btn btn-outline-primary" style="border-color: #0066cc; color: #0066cc;" aria-label="Ver funcionalidades">Ver funcionalidades</a>
+            </div>
+          </div>
+          <div class="col-lg-5" data-aos="fade-left">
+            <div style="position: relative;">
+              <picture>
+                <source type="image/webp" srcset="assets/img/about/about-8-400.webp 400w, assets/img/about/about-8-800.webp 800w, assets/img/about/about-8-1200.webp 1200w" sizes="(max-width:768px) 90vw, 50vw">
+                <img src="assets/img/about/about-8-800.webp" alt="WinRest POS" class="img-fluid" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;" loading="eager" decoding="async" fetchpriority="high" width="640" height="480">
+              </picture>
+              <div style="position: absolute; top: -10px; right: -10px; background: #0066cc; color: white; padding: 8px 12px; border-radius: 50%; box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);">
+                <i class="bi bi-shop"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="section">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <span class="subtitle">Funcionalidades</span>
+          <h2>O que entregamos</h2>
+        </div>
+
+        <div class="features-grid mt-4">
+          <div class="feature-item">
+            <div class="feature-icon"><i class="bi bi-book"></i></div>
+            <div>
+              <h4>Gestão de Mesas</h4>
+              <p class="mb-0">Planeamento visual de mesas, reservas e turnos.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon"><i class="bi bi-receipt"></i></div>
+            <div>
+              <h4>Comandas & Cozinha</h4>
+              <p class="mb-0">Envio rápido para cozinha e impressão automática.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon"><i class="bi bi-currency-bitcoin"></i></div>
+            <div>
+              <h4>Pagamentos Integrados</h4>
+              <p class="mb-0">Integração com terminais e relatórios por forma de pagamento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits & Process -->
+    <section class="section">
+      <div class="container" data-aos="fade-up">
+        <div class="row gy-4">
+          <div class="col-lg-7">
+            <div class="section-title">
+              <span class="subtitle" style="color: #0066cc; font-weight: 600;">Benefícios</span>
+              <h2 style="color: #1a3a5c;">O que ganha</h2>
+            </div>
+
+            <div class="benefits-row mt-3">
+              <div class="benefit-card" style="background: white; border: 1px solid #eee; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0, 0, 0, 0.05)';">
+                <h5 style="color: #0066cc;"><i class="bi bi-lightning-fill me-2" style="color: #0066cc;"></i>Agilidade no serviço</h5>
+                <p class="mb-0" style="color: #666;">Reduza tempos de espera e erros de pedidos.</p>
+              </div>
+              <div class="benefit-card" style="background: white; border: 1px solid #eee; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0, 0, 0, 0.05)';">
+                <h5 style="color: #ff6600;"><i class="bi bi-cash-stack me-2" style="color: #ff6600;"></i>Controlo de caixa</h5>
+                <p class="mb-0" style="color: #666;">Fecho de turno simplificado e relatórios precisos.</p>
+              </div>
+              <div class="benefit-card" style="background: white; border: 1px solid #eee; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0, 0, 0, 0.05)';">
+                <h5 style="color: #0066cc;"><i class="bi bi-gear-wide-connected me-2" style="color: #0066cc;"></i>Integração total</h5>
+                <p class="mb-0" style="color: #666;">Compatível com impressoras, POS e sistemas de gestão.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-5">
+            <div class="section-title">
+              <span class="subtitle" style="color: #0066cc; font-weight: 600;">Processo</span>
+              <h2 style="color: #1a3a5c;">Como implementamos</h2>
+            </div>
+
+            <div class="process-steps mt-3" style="display: flex; flex-direction: column; gap: 2rem; position: relative;">
+              <div class="step" style="position: relative; margin-left: 70px;">
+                <div class="step-number" style="background: #0066cc; color: white; position: absolute; left: -64px; top: 0; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 20px; box-shadow: 0 2px 8px rgba(0, 102, 204, 0.2);">1</div>
+                <h6 class="mb-1" style="color: #1a3a5c;">Planeamento</h6>
+                <p class="small mb-0">Mapeamos fluxo de salas e cozinha.</p>
+              </div>
+              <div class="step" style="position: relative; margin-left: 70px;">
+                <div class="step-number" style="background: #ff6600; color: white; position: absolute; left: -64px; top: 0; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 20px; box-shadow: 0 2px 8px rgba(255, 102, 0, 0.2);">2</div>
+                <h6 class="mb-1" style="color: #1a3a5c;">Instalação</h6>
+                <p class="small mb-0">Montagem e integração de hardware.</p>
+              </div>
+              <div class="step" style="position: relative; margin-left: 70px;">
+                <div class="step-number" style="background: #0066cc; color: white; position: absolute; left: -64px; top: 0; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 20px; box-shadow: 0 2px 8px rgba(0, 102, 204, 0.2);">3</div>
+                <h6 class="mb-1" style="color: #1a3a5c;">Treino</h6>
+                <p class="small mb-0">Formação da equipa em contexto real.</p>
+              </div>
+              <div class="step" style="position: relative; margin-left: 70px;">
+                <div class="step-number" style="background: #ff6600; color: white; position: absolute; left: -64px; top: 0; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 20px; box-shadow: 0 2px 8px rgba(255, 102, 0, 0.2);">4</div>
+                <h6 class="mb-1" style="color: #1a3a5c;">Suporte</h6>
+                <p class="small mb-0">Apoio contínuo e atualizações.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sticky contact CTA -->
+    <div class="sticky-contact" role="dialog" aria-label="Contacte-nos rapidamente" style="background: #0066cc; color: white; box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);">
+      <div>
+        <strong style="color: white;">Precisa de ajuda?</strong>
+        <div class="small" style="color: rgba(255, 255, 255, 0.9);">Demonstração WinRest disponível</div>
+      </div>
+      <div class="ms-auto">
+        <a href="index.html#contact" class="btn btn-light btn-sm">Contacte</a>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <section class="service-cta py-5" style="background: #0066cc; color: white; position: relative; overflow: hidden;">
+      <div class="container position-relative">
+        <div class="p-4 p-md-5 rounded-3 text-center" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);">
+          <h2 class="fw-bold" style="color: white;">Precisa de assistência?</h2>
+          <p class="mb-4 cta-subtext" style="color: rgba(255, 255, 255, 0.9); font-size: 1rem;">Contacte-nos para integrar/configurar o WinRest para o seu restaurante.</p>
+          <a href="index.html#contact" class="btn btn-light" style="border: none; padding: 10px 25px;">Fale connosco</a>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      (function(){
+        var titleEl = document.querySelector('#service-title') || document.querySelector('.service-title');
+        var el = document.querySelector('.cta-subtext');
+        if (!titleEl || !el) return;
+        var title = titleEl.innerText.trim();
+        el.textContent = 'Contacte-nos para integrar/configurar o ' + title + ' para o seu restaurante.';
+      })();
+    </script>
+
+  </main>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
